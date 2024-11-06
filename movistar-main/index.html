@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="styles.css" />
+<title>Document</title>
+<!-- author --- IVAN AND DAVID -->
+
+</head>
+<body>
+<!-- NAV -->
+<div class="wrap">
+  <div class="black-bar">
+    <div class="menu-container">
+      <select id="mainMenu" onchange="redirectToPage()">
+        <option value="DAZN 1.html">DAZN 1</option>
+        <option value="DAZN 2.html">DAZN 2</option>
+        <option value="DAZN 3.html">DAZN 3</option>
+        <option value="DAZN 4.html">DAZN 4</option>
+        <option value="DAZN F1.html">DAZN F1</option>
+        <option value="DAZN LA LIGA.html">DAZN LA LIGA</option>
+        <option value="MOVISTAR LA LIGA.html">MOVISTAR LA LIGA</option>
+        <option value="MOVISTAR LIGA DE CAMPEONES.html">MOVISTAR LA LIGA DE CAMPEONES</option>
+        <option value="MOVISTAR DEPORTES 1.html">MOVISTAR DEPORTES 1</option>
+        <option value="MOVISTAR DEPORTES 2.html">MOVISTAR DEPORTES 2</option>
+        <option value="MOVISTAR DEPORTES 3.html">MOVISTAR DEPORTES 3</option>
+        <option value="MOVISTAR DEPORTES 4.html">MOVISTAR DEPORTES 4</option>
+        <option value="MOVISTAR #VAMOS.html">MOVISTAR #VAMOS</option>
+        <option value="MOVISTAR +.html">MOVISTAR +</option>
+        <option value="EUROSPORT 1.html">EUROSPORT 1</option>
+        <option value="EUROSPORT 2.html">EUROSPORT 2</option>
+        <option value="ONE TORO.html">ONE TORO</option>
+      </select>
+    </div>
+    <h1>DAZN 1</h1>
+  </div>
+</div>
+
+<iframe
+  class="shadow-lg rounded"
+  width="100%"
+  style="aspect-ratio: 16/9; margin-bottom: 20px"
+  name="iframe"
+  id="iframe"
+  title="Live Video"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  allowfullscreen
+  src="https://1.deporte-libre.org/en-vivo-online/dazn-1-es/embed.php"
+  scrolling="no"
+  frameBorder="0"
+  allowfullscreen
+></iframe>
+
+<div class="grid md:grid-cols-5 gap-3">
+  <a class="btn btn-md" target="iframe" href="https://1.deporte-libre.org/en-vivo-online/dazn-1-es/embed.php"
+    >Opción 1</a
+  ><a class="btn btn-md" target="iframe" href="https://1.deporte-libre.org/en-vivo-online/dazn-1-es/embed2.php"
+    >Opción 2</a
+  ><a class="btn btn-md" target="iframe" href="https://1.deporte-libre.org/en-vivo-online/dazn-1-es/embed3.php"
+    >Opción 3</a
+  >
+</div>
+
+<script>
+function redirectToPage() {
+  var selectElement = document.getElementById("mainMenu");
+  var selectedValue = selectElement.value;
+  window.location.href = selectedValue;
+}
+
+// Obtener la URL actual
+var currentPage = window.location.href;
+
+// Seleccionar automáticamente la opción correspondiente en el menú desplegable
+var selectElement = document.getElementById("mainMenu");
+for (var i = 0; i < selectElement.options.length; i++) {
+  var optionText = selectElement.options[i].text.toLowerCase();
+  if (currentPage.toLowerCase().indexOf(optionText) !== -1) {
+    selectElement.selectedIndex = i;
+    break;
+  }
+}
+</script>
+
+</body>
+</html>

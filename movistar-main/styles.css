@@ -1,0 +1,117 @@
+@media only screen and (max-width: 768px) {
+  /* Estilos específicos para tabletas */
+  .main__heading {
+    font-size: 1.5em; /* Reducir tamaño del encabezado principal */
+  }
+
+  .varias {
+    width: 100%; /* Ajustar el ancho del contenedor de imágenes */
+    height: auto; /* Permitir que la altura del contenedor de imágenes se ajuste automáticamente */
+    margin: auto; /* Centrar el contenedor de imágenes */
+  }
+  
+  .varias img {
+    width: 80px; /* Reducir el tamaño de las imágenes en tabletas */
+  }
+}
+@media only screen and (max-width: 576px) {
+  /* Estilos específicos para dispositivos móviles */
+  .main__heading {
+    font-size: 1.2em; /* Reducir aún más el tamaño del encabezado principal para dispositivos móviles */
+  }
+
+  .varias {
+    width: 100%; /* Ajustar el ancho del contenedor de imágenes para dispositivos móviles */
+    height: auto; /* Permitir que la altura del contenedor de imágenes se ajuste automáticamente */
+    margin: auto; /* Centrar el contenedor de imágenes */
+  }
+
+  .varias img {
+    width: 60px; /* Reducir aún más el tamaño de las imágenes para dispositivos móviles */
+  }
+}
+
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Barra negra */
+.wrap {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+}
+
+.black-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-container {
+  flex-grow: 1;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Estilos del menú desplegable */
+select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Estilo del iframe */
+iframe {
+  border: none;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de la cuadrícula de botones */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Estilos de los botones */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .grid {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .btn {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
